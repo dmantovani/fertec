@@ -1,0 +1,17 @@
+RewriteEngine On
+
+ErrorDocument 404 /404.html
+
+RewriteRule ^([_0-9a-z-]+)/([_0-9a-z-]+)/([_0-9a-zA-Z-&!=]+)/([_0-9a-zA-Z-&!=]+)/([_0-9a-zA-Z-&!=]+)/$ index.php/$1/$2/$3/$4/$5/ [QSA]
+RewriteRule ^([_0-9a-z-]+)/([_0-9a-z-]+)/([_0-9a-zA-Z-&!=]+)/([_0-9a-zA-Z-&!=]+)/([_0-9a-zA-Z-&!=]+)$ index.php/$1/$2/$3/$4/$5 [QSA]
+
+RewriteRule ^([_0-9a-z-]+)/([_0-9a-z-]+)/([_0-9a-zA-Z-&!=]+)/([_0-9a-zA-Z-&!=]+)/$ index.php/$1/$2/$3/$4/ [QSA]
+RewriteRule ^([_0-9a-z-]+)/([_0-9a-z-]+)/([_0-9a-zA-Z-&!=]+)/([_0-9a-zA-Z-&!=]+)$ index.php/$1/$2/$3/$4 [QSA]
+
+RewriteRule ^([_0-9a-z-]+)/([_0-9a-z-]+)/([_0-9a-zA-Z-&!=]+)/$ index.php/$1/$2/$3/ [QSA]
+RewriteRule ^([_0-9a-z-]+)/([_0-9a-z-]+)/([_0-9a-zA-Z-&!=]+)$ index.php/$1/$2/$3 [QSA]
+
+RewriteRule ^([_0-9a-z-]+)/([_0-9a-z-]+)/$ index.php/$1/$2/ [QSA]
+RewriteRule ^([_0-9a-z-]+)/([_0-9a-z-]+)$ index.php/$1/$2 [QSA]
+
+RewriteRule ^([_0-9a-z-]+)/$ index.php/$1/ [QSA]

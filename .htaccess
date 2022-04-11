@@ -1,0 +1,27 @@
+RewriteEngine On
+
+<IfModule mod_headers.c>
+  <FilesMatch ".(js|css|xml|gz|html)$">
+    Header append Vary: Accept-Encoding
+  </FilesMatch>
+</IfModule>
+
+
+ErrorDocument 404 /404.html
+
+
+
+RewriteRule ^timthumb/(.*)/(.*)/(.*)/ libraries/timthumb.php?src=$1&w=$2&h=$3 [QSA]
+RewriteRule ^timthumb/(.*)/(.*)/ libraries/timthumb.php?src=$1&w=$2 [QSA]
+
+RewriteRule ^prov/([_0-9a-z-]+)$ ?prov/index.php/$1/ [QSA]
+RewriteRule ^prov/([_0-9a-z-]+)/$ ?prov/index.php/$1/ [QSA]
+
+RewriteRule ^([_0-9a-z-]+)/([_0-9a-z-]+)/([_0-9a-zA-Z-&!=]+)/([_0-9a-zA-Z-&!=]+)$ ?index.php/$1/$2/$3/$4/ [QSA]
+RewriteRule ^([_0-9a-z-]+)/([_0-9a-z-]+)/([_0-9a-zA-Z-&!=]+)/([_0-9a-zA-Z-&!=]+)/$ ?index.php/$1/$2/$3/$4/ [QSA]
+RewriteRule ^([_0-9a-z-]+)/([_0-9a-z-]+)/([_0-9a-zA-Z-&!=]+)$ ?index.php/$1/$2/$3/ [QSA]
+RewriteRule ^([_0-9a-z-]+)/([_0-9a-z-]+)/([_0-9a-zA-Z-&!=]+)/$ ?index.php/$1/$2/$3/ [QSA]
+RewriteRule ^([_0-9a-z-]+)/([_0-9a-z-]+)$ ?index.php/$1/$2/ [QSA]
+RewriteRule ^([_0-9a-z-]+)/([_0-9a-z-]+)/$ ?index.php/$1/$2/ [QSA]
+RewriteRule ^([_0-9a-z-]+)$ ?index.php/$1/ [QSA]
+RewriteRule ^([_0-9a-z-]+)/$ ?index.php/$1/ [QSA]

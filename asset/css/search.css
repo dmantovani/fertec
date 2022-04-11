@@ -1,0 +1,88 @@
+.section-header{padding:0; min-height:400px; position:relative; background:none;}
+.section-header:after{content:''; width:50%; height:10px; background:#ff4a70; position:absolute; bottom:0; left:0;}
+.section-header .sec-title{position:absolute; bottom:80px; left:10%; color:#fff; z-index:1;}
+.section-header h1{font-weight:100; font-size:32px; line-height:32px; margin-bottom:0;}
+.section-header h2{font-size:30px; line-height:28px; margin-top:0;}
+
+.search{width:350px; padding:8px 16px; position:absolute; bottom:30px; left:10%;  z-index:99; background:rgba(255,255,255,0.7); border-radius:25px;}
+.search input{width:270px; padding:8px 0; background:transparent; border:0;}
+.search .btn{width:30px; float:right; text-align:center; padding:6px 5px; box-shadow:none !important;}
+.search .btn:hover i{color:#dc4968;}
+
+.cursos-destacados{padding:20px 10%; text-align:center; }
+.cursos-destacados h2{font-weight:100; font-size:60px; margin-bottom:50px;}
+
+.cursos-content{padding:10px 0;}
+.list-curso{background:#ededed; border:6px solid #fff; padding:8px 0 0 0; text-align:left; height:450px; cursor:pointer; overflow:hidden;}
+.list-curso .imagen{overflow:hidden; -webkit-transition: 0.4s; transition: 0.4s; padding:0;}
+.list-curso img{width:100%;}
+.list-curso h2{font-size:24px; font-weight:100; padding:0 15px; margin-bottom:0; word-wrap:break-word;}
+.list-curso h4{font-size:16px; color:#999; font-weight:400; padding:3px 15px; margin-bottom:0; word-wrap:break-word; position:absolute; top:0; left:0; background:#333; color:#fff;}
+.list-curso .descripcion{height:120px; overflow:hidden; position:relative; font-size:12px; line-height:14px; color:#444; padding:15px; -webkit-transition: 0.4s; transition: 0.4s;}
+.list-curso .descripcion:after{
+	content:''; width:100%; height:20px; position:absolute; bottom:0; left:0; 
+	background: -moz-linear-gradient(top, rgba(237,237,237,0) 0%, rgba(237,237,237,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(237,237,237,0) 0%,rgba(237,237,237,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(237,237,237,0) 0%,rgba(237,237,237,1) 100%);
+}
+.list-curso:hover .imagen{
+	height:40px !important;
+	-webkit-transition: 0.4s; transition: 0.4s;
+}
+.list-curso:hover .descripcion{height:200px; -webkit-transition: 0.4s; transition: 0.4s;}
+
+.list-curso .btn{position:absolute; bottom:0; left:0; width:100%; border-radius:0; padding:8px; text-align:center; color:#fff;}
+.list-curso .btn.cat-1{background:#6861e8;}
+.list-curso .btn.cat-2{background:#31c8d6;}
+.list-curso .btn.cat-3{background:#dc4968;}
+
+.sedes{padding:0; text-align:center;}
+.sedes h2{background:#eaeaea; color:#47cfd9; font-size:48px; font-weight:100; padding:40px 15px; margin:0;}
+.sedes .map_canvas{height:500px;}
+
+.bertoldi{padding:0; background:#343434; min-height:450px; position:relative;}
+.bertoldi .img{background:url(../img/bertoldi_home_bg.jpg) no-repeat right center; background-size:cover; position:absolute; height:100%;}
+.bertoldi .img:after{content:''; position:absolute; right:0; top:0; width:40%; height:100%; background:url(../img/like_a_pro_home.png) no-repeat center center / 60% auto ,rgba(0,0,0,0.8);}
+.bertoldi .data{padding:150px 10% 150px 4%; color:#fff;}
+.bertoldi .data h3{font-size:48px; font-weight:100;}
+
+
+.formulario{padding:130px 30%;}
+.formulario h3{font-weight:100; font-size:36px; text-align:center; margin-bottom:30px;}
+.formulario .input-td input,.formulario .input-td textarea{width:100%; border:1px solid #ededed; background:#ededed; color:#333; padding:12px 8px; resize:none; max-width:100%; margin:2px 0;}
+.formulario .input-td textarea{height:260px; background:url(../img/textarea_bg.png) no-repeat center center #ededed; background-size:contain;}
+.input-td{padding:0 0; position:relative;}
+.formulario .input-td.error input, .formulario .input-td.error_mail input{
+	border:1px solid #ff0000;
+}
+
+.formulario .btn{text-shadow:none; width:100%; font-size:22px; text-align:center; font-weight:300; padding-left:30px; padding-right:30px; border:0; border-radius:0; margin-top:2px; background: #47cfd9; color:#fff; text-shadow:none;}
+
+
+@media screen and (min-width: 1440px) {
+   .list-curso{height:540px;}
+   .list-curso h2{font-size:32px;}
+   .list-curso:hover .imagen{height:150px !important;}
+   .list-curso .descripcion{height:140px; font-size:13px;}
+   .list-curso:hover .descripcion{height:280px;}
+   .bertoldi .data{padding:250px 15% 250px 4%; color:#fff;}
+}
+@media screen and (max-width:768px) {
+	.bertoldi .img {
+		position: relative;
+		height: 300px;
+	}
+	.bertoldi .data{float:none !important; padding:10px 10% 80px 10%; text-align:center;}
+	.formulario {padding: 80px 5%;}
+	.list-curso .imagen{height:200px !important;}
+	.list-curso:hover .imagen{height:80px !important;}
+	.list-curso:hover .descripcion {height: 220px;}
+}
+@media screen and (max-width:600px) {
+	.list-curso .imagen{height:150px !important;}
+	.list-curso .descripcion{height:150px;}
+	.list-curso:hover .descripcion{height:220px;}
+}
+@media screen and (max-device-width:768px) {
+	.section-header{padding:0; min-height:400px; background:url(../img/video_bg.gif) no-repeat right center #aaa; background-size:cover; position:relative;}
+}

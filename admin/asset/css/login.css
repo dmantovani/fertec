@@ -1,0 +1,85 @@
+
+
+#main{
+width:100%;
+margin:0;
+font-family:raleway;
+min-height:650px;
+
+}
+
+span{
+color:red;
+}
+
+
+
+input[type=text],input[type=password], input[type=email]{
+width:99.5%;
+padding: 10px;
+margin-top: 0px;
+border: 1px solid #ccc;
+padding-left: 5px;
+font-size: 16px;
+font-family:raleway;
+}
+label{font-weight:300;}
+
+
+#profile{
+padding:50px;
+border:1px dashed grey;
+font-size:20px;
+background-color:#DCE6F7;
+}
+#login{
+background:#fff;
+position:absolute;
+top:50%;
+left:50%;
+z-index:9;
+margin-left:-275px;
+margin-top:-210px;
+width:450px;
+height:420px;
+font-family:raleway;
+border: 1px solid #ccc;
+padding: 10px 40px 25px;
+box-shadow:0px 0px 4px rgba(0,0,0,0.2);
+}
+#login .logo{width:250px; height:50px; background:url(../img/logo_fixed.png) no-repeat; background-size:contain; margin-top:15px;}
+#login h2{font-size:20px; margin-bottom:15px;}
+#login .btn{width:100%;}
+
+
+
+a{
+text-decoration:none;
+color: cornflowerblue;
+}
+
+i{
+color: cornflowerblue;
+}
+
+.error_msg{
+color: red;
+font-size: 14px;
+text-align: center;
+padding-top: 30px;
+}
+
+.message{
+position: absolute;
+font-weight: bold;
+font-size: 28px;
+color: #6495ED;
+left: 262px;
+width: 500px;
+text-align: center;
+}
+
+@media (max-width: 767px) {
+	#login {max-width: 100%;width: 100%;left: 0;right: 0;margin-left: 0;margin-right: 0;}
+}
+

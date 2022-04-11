@@ -1,0 +1,29 @@
+html, body {margin:0;padding:0;}
+
+body{ font-family: 'Raleway', sans-serif;}
+
+@font-face{
+    font-family:AmpleSoft-Light;
+    src: url(../fonts/AmpleSoft-Light.otf) format('opentype');
+}
+
+@font-face{
+    font-family:AmpleSoft-Bold;
+    src: url(../fonts/AmpleSoft-Bold.otf) format('opentype');
+}
+
+@font-face{
+    font-family:AmpleSoft-Medium;
+    src: url(../fonts/AmpleSoft-Medium.otf) format('opentype');
+}
+
+.header-nav-user {position: fixed;top: 0;left: 0;right: 0;z-index: 9;background: #3b3644;padding: 5px 20px;text-align: right;}
+.header-nav-user .nav-link {color: #fff;font-family:AmpleSoft-Light;}
+
+.content-vendedor {margin-right:auto;}
+.content-vendedor p {margin: 0;font-size: 15px;color: #fff;font-family: AmpleSoft-Light;}
+.header-nav-user .nav-link {padding:5px 25px;transition:.6s;}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {background-color: #ea212e;padding: 5px 25px;transition:.6s;}
+
+.content-vendedor .nuevo {color: #fff;font-family: AmpleSoft-Light;transition:.6s;}
+.content-vendedor .nuevo:hover {transition:.6s;text-decoration:none;opacity:.6;}
